@@ -125,12 +125,12 @@ double* exprnd(unsigned n, double lambda)
 double normpdf(double x, double mu, double sig)
 {
         if (sig < 0) 
-                error("Parameter mu is smaller than 0.");
-        return 0.0; // TODO
+                error("Parameter sig is smaller than 0.");
 
+        return (0.3989422804014327/sig)*exp(-0.5*SQR(x-mu)/SQR(sig));
 }
 
-/* umulative distribution function for normal distribution */
+/* Cumulative distribution function for normal distribution */
 double normcdf(double x, double mu, double sig)
 {
         if (sig < 0) 
