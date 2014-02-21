@@ -135,10 +135,10 @@ double normcdf(double x, double mu, double sig)
 {
         if (sig < 0) 
                 error("Parameter sig is smaller than 0.");
-        if (x < 0) 
-                return 0.0;
+        if (x > 3*sig) 
+                return 0.5*erfc(-0.7071067811865475*(x - mu)/sig);
 
-        return 0.0; // TODO
+        return 0.5*(1 + erf(0.7071067811865475*(x - mu)/sig));
 }
 
 /* Inverse cumulative distribution function of normal distribution */
