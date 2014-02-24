@@ -3,6 +3,7 @@
 
 #include "cdists.h"
 
+// Gamma distribution
 double gammapdf(double x, double shape, double rate);
 double gammacdf(double x, double shape, double rate);
 double gammainv(double p, double shape, double rate);

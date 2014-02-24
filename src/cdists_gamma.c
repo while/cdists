@@ -63,7 +63,7 @@ double* gammarnd(unsigned n, double shape, double rate)
                                 v = 1. + a2 * *x;
                         } while (v <= 0);
                         v = v*v*v;
-                        u = _rnd();
+                        u = rnd();
                 } while (u > 1. - 0.331*SQR(SQR(*x)) &&
                                 log(u) > 0.5*SQR(*x) + a1*(1. - v + log(v)));
                 if (shape == orig_shape)
